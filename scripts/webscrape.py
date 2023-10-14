@@ -1,7 +1,14 @@
 from selenium import webdriver
 
-# Initialize the Chrome WebDriver (provide the path to your Chrome WebDriver executable)
-driver = webdriver.Chrome(executable_path=r'C:\Users\pvshc\Desktop\Repositories\geo-guesser')
+
+# Specify the path to the Chrome WebDriver executable
+chrome_driver_path = r'C:\Users\pvshc\Desktop\Repositories\geo-guesser\chromedriver.exe'
+
+# Initialize the Chrome WebDriver with the executable path
+webdriver.chrome.driver = chrome_driver_path
+
+# Initialize the Chrome WebDriver
+driver = webdriver.Chrome()
 
 # Open a webpage
 driver.get('https://google.com')
